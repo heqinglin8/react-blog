@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
-
+import AdminApp from './admin/index'
 import './app.css';
 
 // ref https://stackoverflow.com/questions/46482433/reactjs-createclass-is-not-a-function
@@ -65,5 +65,6 @@ class Calendar extends React.Component {
 render((
   <BrowserRouter>
     <Route path="/" component={App} />
+    {/* <Route path="/admin" component={AdminApp} /> */}
   </BrowserRouter>
 ), document.querySelector('#app'));
