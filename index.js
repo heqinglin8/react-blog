@@ -29,7 +29,7 @@ class App extends React.Component {
       </div>
     );
   }
-};
+}
 
 class Dashboard extends React.Component {
   render() {
@@ -64,7 +64,9 @@ class Calendar extends React.Component {
 // ref https://segmentfault.com/q/1010000009616045/a-1020000009618728
 render((
   <BrowserRouter>
-    <Route path="/" component={App} />
-    {/* <Route path="/admin" component={AdminApp} /> */}
+     <Switch>
+      <Route exact path="/" component={App} />
+      <Route path="/admin" component={AdminApp} />
+    </Switch>
   </BrowserRouter>
 ), document.querySelector('#app'));
