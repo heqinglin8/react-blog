@@ -3,6 +3,8 @@ import { render } from 'react-dom';
 import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
 import AdminApp from './admin/index'
 import './app.css';
+import { Provider} from 'mobx-react';
+import store from './admin/store'
 
 // ref https://stackoverflow.com/questions/46482433/reactjs-createclass-is-not-a-function
 class App extends React.Component {
@@ -64,9 +66,15 @@ class Calendar extends React.Component {
 // ref https://segmentfault.com/q/1010000009616045/a-1020000009618728
 render((
   <BrowserRouter>
-     <Switch>
+  <Provider {...store}>
+    <Switch>
       <Route exact path="/" component={App} />
       <Route path="/admin" component={AdminApp} />
     </Switch>
+    </Provider>
+     {/* <Switch>
+      <Route exact path="/" component={App} />
+      <Route path="/admin" component={AdminApp} />
+    </Switch> */}
   </BrowserRouter>
 ), document.querySelector('#app'));
