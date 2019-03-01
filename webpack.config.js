@@ -15,7 +15,14 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['es2015', 'react']
+            presets:[
+              "es2015",
+              "env",
+              "stage-1",
+              "react",
+              "react-native-stage-0/decorator-support"
+            ],
+          plugins: ["transform-decorators-legacy"]
           }
         }
       },
