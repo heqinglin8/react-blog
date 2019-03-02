@@ -1,10 +1,10 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
-import AdminApp from './admin/index'
-import './app.css';
+import AdminApp from './src/admin/index'
+import './src/assets/css/app.css';
 import { Provider} from 'mobx-react';
-import store from './admin/store'
+import store from './src/admin/store'
 
 // ref https://stackoverflow.com/questions/46482433/reactjs-createclass-is-not-a-function
 class App extends React.Component {
