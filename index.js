@@ -33,6 +33,16 @@ class App extends React.Component {
   }
 }
 
+class Admin extends React.Component {
+  render() {
+    return (
+      <div>
+        <p>Admin</p>
+      </div>
+    );
+  }
+};
+
 class Dashboard extends React.Component {
   render() {
     return (
@@ -70,6 +80,7 @@ render((
     <Switch>
       <Route exact path="/" component={App} />
       <Route path="/admin" component={AdminApp} />
+      {/* <Route path="/admin" component={Admin} /> */}
     </Switch>
     </Provider>
      {/* <Switch>
